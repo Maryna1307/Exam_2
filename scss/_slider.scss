@@ -57,37 +57,50 @@
     }
 }
 
-// .slick-arrow {
-//     position: absolute;
-//     top: 50%;
-//     transform: translateY(-50%);
-//     z-index: 3;
-//     font-size: 0;
+.news__slider .slick-track {
+    display: flex;
+    gap: 20px;
+}
+
+.news__slider .slick-dots {
+    position: absolute;
+    flex-direction: row;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 550px;
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    font-size: 0;
  
 
-//     &::before {
-//         content: url(../assets/svg/sprite/prev_arrow.svg);
-//         position: absolute;
-//         top: 50%;
-//         left: 50%;
-//         transform: translate(-50%, -50%);
-//     }
+    &::before {
+        content: url(../assets/svg/prev_arrow.svg);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
 
-// }
+}
 
-// .slick-prev {
-//     left: -40px;
-// }
+.slick-prev {
+    left: -60px;
+}
 
-// .slick-next {
-//     left: none;
-//     right: -40px;
+.slick-next {
+    left: none;
+    right: -60px;
 
-//     &::before {
-//         content: url(../assets/svg/sprite/next_arrow.svg);
-//     }
-// }
+    &::before {
+        content: url(../assets/svg/next_arrow.svg);
+    }
+}
 
 // .slick-track {
 //     display: flex;

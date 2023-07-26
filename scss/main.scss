@@ -13,6 +13,11 @@ html, body {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     color: #2C4058;
+    width: 100vw;
+}
+
+.main {
+    position: relative;
 }
 
 .title {
@@ -42,11 +47,25 @@ html, body {
             left: 50%;
             transform: translateX(-50%);
         }
+
+        &_white {
+            color: #FFFFFF;
+            text-align: center;
+
+            &::before {
+                background: #FFFFFF;
+            }
+        }
     }
 
     &_3 {
         font-size: 44px;
         margin-bottom: 19px;
+    }
+
+    &_4 {
+        font-size: 22px;
+        margin-bottom: 15px;
     }
 
     &_5 {
@@ -59,6 +78,19 @@ html, body {
         color: #FFFFFF;
         letter-spacing: 5.4px;
         margin-bottom: 240px;
+    }
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #000000;
+    background: none;
+    border: 1px solid #2C4058;
+
+    &:hover {
+        background: #7E5AFF;
+        color: #FFFFFF;
     }
 }
 
@@ -103,31 +135,31 @@ html, body {
             background: #FFFFFF;
         }
     }
+}
 
-    .socials {
-        @include flex(center, center, 20px);
-        list-style: none;
+.socials {
+    @include flex(center, center, 20px);
+    list-style: none;
 
-        &__item {
-            width: 40px;
-            height: 40px;
-            border: 1px solid #FFFFFF;
-            border-radius: 50%;
-            @include flex(center, center, 0);
+    &__item {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #ffffff66;
+        border-radius: 50%;
+        @include flex(center, center, 0);
 
-        }
+    }
 
-        &__icon {
-            fill: #FFFFFF;
-        }
+    &__icon {
+        fill: #FFFFFF;
+    }
 
-        &__item:hover {
-            background: #FFFFFF;
-        }
+    &__item:hover {
+        background: #FFFFFF;
+    }
 
-        &__item:hover .socials__icon {
-            fill: #7E5AFF;
-        }
+    &__item:hover .socials__icon {
+        fill: #7E5AFF;
     }
 }
 
@@ -201,12 +233,7 @@ html, body {
         }
 
         &__btn {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 14px;
-            color: #000000;
             padding: 17px 40px;
-            background: none;
-            border: 1px solid #2C4058;
             margin-bottom: 60px;
         }
 
@@ -229,3 +256,220 @@ html, body {
         }
     }
 }
+
+.project__image_blue,
+.project__image_purple {
+    position: relative;
+}
+
+.project__image_blue::before {
+    content: '';
+    display: block;
+    height: 470px;
+    width: 93%;
+    background: #55B7FF;
+    position: absolute;
+    top: -57px;
+    left: -215px;
+    z-index: -1;
+}
+
+.project__image_purple::after {
+    content: '';
+    display: block;
+    height: 470px;
+    width: 93%;
+    background: #7E5AFF;
+    position: absolute;
+    top: -57px;
+    right: -215px;
+    z-index: -1;
+}
+
+.news-section {
+    min-height: 100vh;
+    background: url(../assets/img/news_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px 0;
+
+    .news {
+        width: 370px;
+
+        &__slider {
+            max-width: 1170px;
+            margin: 0 auto;
+            @include flex(center, center, 30px)
+        }
+
+        &__img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        &__info {
+            padding: 30px 20px;
+            background: #FFFFFF;
+        }
+
+        &__text {
+            margin-bottom: 40px;
+        }
+
+        .author {
+            @include flex(flex-start, center, 20px);
+
+            &__img {
+                border-radius: 50%;
+            }
+
+            &__name {
+                font-family: 'Montserrat', sans-serif;
+                margin-bottom: 6px;
+            }
+
+            &__date {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 14px;
+                color: #55B7FF;
+            }
+        }
+    }
+}
+
+// .container {
+//     display: flex;
+//     justify-content: space-between;
+//   }
+//   .item {
+//     width: 100px;
+//     height: 100px;
+//     padding: 10px;
+//     border: 2px solid black;
+//     text-align: center;
+//   }
+//   .wrapper {
+//     position: fixed;
+//     left: 0;
+//     top: 0;
+//     display: none;
+//     align-items: center;
+//     justify-content: center;
+//     width: 100%;
+//     height: 100%;
+//     background: grey;  
+//   }
+//   .wrapper__img {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;  
+//     width: 400px;
+//     height: 400px;
+//     transform: translate(-50%, -50%);
+//   }
+.gallery {
+    padding: 180px 0 150px;
+    text-align: center;
+    max-width: 1170px;
+    margin: 0 auto;
+
+    &__images {
+        margin-bottom: 60px;
+    }
+
+    &__btn {
+        padding: 17px 57px;
+    }
+}
+
+.footer {
+    padding: 203px 0 234px;
+    background: url(../assets/img/footer_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    &__container {
+        max-width: 770px;
+        margin: 0 auto;
+        @include flex(space-between, flex-start, 0);
+    }
+
+    & .logo {
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        color: #FFFFFF;
+    }
+}
+
+.contacts {
+    width: 770px;
+    background: #FFFFFF;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -100px;
+    padding: 90px 60px 70px;
+    text-align: center;
+
+    & .title_2 {
+        margin-bottom: 42px;
+    }
+
+    &__container {
+        @include flex(space-between, flex-start, 54px);
+    }
+
+    &__info {
+        text-align: left;
+    }
+
+    &__text {
+        font-family: 'Montserrat', sans-serif;
+        line-height: 28px;
+        color: #000000;
+        margin-bottom: 28px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__info,
+    &__form {
+        width: 50%;
+    }
+
+    .input {
+        font-family: 'Montserrat', sans-serif;
+        color: #000000;
+        padding: 0 0 14px;
+        border: none;
+        border-bottom: 1px solid #2c405833;
+
+        &:focus {
+           outline:  none;
+           border-bottom-color: #2C4058;
+        }
+    }
+
+    .btn-submit {
+        width: 45%;
+        margin-left: auto;
+        font-size: 18px;
+        line-height: 1.5;
+        padding: 12px 32px 12px 30px;
+    }
+
+    &__icon {
+        vertical-align: middle;
+    }
+}
+
