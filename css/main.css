@@ -639,11 +639,41 @@ html, body {
   max-width: 1170px;
   margin: 0 auto;
 }
+.gallery__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 60px;
+}
 .gallery__images {
   margin-bottom: 60px;
 }
 .gallery__btn {
   padding: 17px 57px;
+}
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+}
+.gallery__item_big {
+  grid-column: span 2;
+  grid-row: span 2;
+  position: relative;
+}
+.gallery__item_big::after {
+  content: url(../assets/img/zoom.png);
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+}
+
+.map {
+  width: 100%;
+  height: 700px;
 }
 
 .footer {
@@ -675,7 +705,7 @@ html, body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -100px;
+  bottom: -160px;
   padding: 90px 60px 70px;
   text-align: center;
 }
