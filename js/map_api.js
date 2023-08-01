@@ -5,13 +5,12 @@ function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 14,
         center: center,
-        mapId: "bbd535e419d12314",
         styles: [
           {
             "elementType": "geometry",
             "stylers": [
               {
-                "color": "#212121"
+                "color": "#f5f5f5"
               }
             ]
           },
@@ -27,7 +26,7 @@ function initMap() {
             "elementType": "labels.text.fill",
             "stylers": [
               {
-                "color": "#757575"
+                "color": "#616161"
               }
             ]
           },
@@ -35,42 +34,25 @@ function initMap() {
             "elementType": "labels.text.stroke",
             "stylers": [
               {
-                "color": "#212121"
-              }
-            ]
-          },
-          {
-            "featureType": "administrative",
-            "elementType": "geometry",
-            "stylers": [
-              {
-                "color": "#757575"
-              }
-            ]
-          },
-          {
-            "featureType": "administrative.country",
-            "elementType": "labels.text.fill",
-            "stylers": [
-              {
-                "color": "#9e9e9e"
+                "color": "#f5f5f5"
               }
             ]
           },
           {
             "featureType": "administrative.land_parcel",
-            "stylers": [
-              {
-                "visibility": "off"
-              }
-            ]
-          },
-          {
-            "featureType": "administrative.locality",
             "elementType": "labels.text.fill",
             "stylers": [
               {
                 "color": "#bdbdbd"
+              }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#eeeeee"
               }
             ]
           },
@@ -88,7 +70,7 @@ function initMap() {
             "elementType": "geometry",
             "stylers": [
               {
-                "color": "#181818"
+                "color": "#e5e5e5"
               }
             ]
           },
@@ -97,75 +79,21 @@ function initMap() {
             "elementType": "labels.text.fill",
             "stylers": [
               {
-                "color": "#616161"
-              }
-            ]
-          },
-          {
-            "featureType": "poi.park",
-            "elementType": "labels.text.stroke",
-            "stylers": [
-              {
-                "color": "#1b1b1b"
+                "color": "#9e9e9e"
               }
             ]
           },
           {
             "featureType": "road",
-            "elementType": "geometry.fill",
+            "elementType": "geometry",
             "stylers": [
               {
-                "color": "#2c2c2c"
-              }
-            ]
-          },
-          {
-            "featureType": "road",
-            "elementType": "labels.text.fill",
-            "stylers": [
-              {
-                "color": "#8a8a8a"
+                "color": "#ffffff"
               }
             ]
           },
           {
             "featureType": "road.arterial",
-            "elementType": "geometry",
-            "stylers": [
-              {
-                "color": "#373737"
-              }
-            ]
-          },
-          {
-            "featureType": "road.highway",
-            "elementType": "geometry",
-            "stylers": [
-              {
-                "color": "#3c3c3c"
-              }
-            ]
-          },
-          {
-            "featureType": "road.highway.controlled_access",
-            "elementType": "geometry",
-            "stylers": [
-              {
-                "color": "#4e4e4e"
-              }
-            ]
-          },
-          {
-            "featureType": "road.local",
-            "elementType": "labels.text.fill",
-            "stylers": [
-              {
-                "color": "#616161"
-              }
-            ]
-          },
-          {
-            "featureType": "transit",
             "elementType": "labels.text.fill",
             "stylers": [
               {
@@ -174,11 +102,56 @@ function initMap() {
             ]
           },
           {
+            "featureType": "road.highway",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#dadada"
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#616161"
+              }
+            ]
+          },
+          {
+            "featureType": "road.local",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+            ]
+          },
+          {
+            "featureType": "transit.line",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#e5e5e5"
+              }
+            ]
+          },
+          {
+            "featureType": "transit.station",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#eeeeee"
+              }
+            ]
+          },
+          {
             "featureType": "water",
             "elementType": "geometry",
             "stylers": [
               {
-                "color": "#000000"
+                "color": "#c9c9c9"
               }
             ]
           },
@@ -187,7 +160,7 @@ function initMap() {
             "elementType": "labels.text.fill",
             "stylers": [
               {
-                "color": "#3d3d3d"
+                "color": "#9e9e9e"
               }
             ]
           }
