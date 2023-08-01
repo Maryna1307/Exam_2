@@ -18,25 +18,41 @@ $(document).ready(function(){
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
-    dots: true
+    dots: true,
+    
+
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true,
+        }
+      },
+    ],
+
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true,
+        }
+      },
+    ],
+
+    // responsive: [
+    //   {
+    //     breakpoint: 768,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       slidesToScroll: 1,
+    //     }
+    //   },
+    // ]
   });
 });
-
-// var $wrapper = $('<div class="wrapper"></div>');
-
-// $('.item').on('click', function(event) {
-  
-//   var $clone = $(this).clone();
-//   $clone.addClass('wrapper__img');
- 
-//   $wrapper.html($clone);
-//   $wrapper.appendTo('body').fadeIn(400); 
-  
-// });
-
-// $wrapper.on('click', function(event) {
-//     $(this).empty();
-//     $(this).fadeOut(400, function() {
-//       $(this).detach();
-//     });    
-//  });
