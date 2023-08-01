@@ -285,7 +285,7 @@ html, body {
     background: #55B7FF;
     position: absolute;
     top: -57px;
-    left: -215px;
+    left: -190px;
     z-index: -1;
 }
 
@@ -297,7 +297,7 @@ html, body {
     background: #7E5AFF;
     position: absolute;
     top: -57px;
-    right: -215px;
+    right: -190px;
     z-index: -1;
 }
 
@@ -727,6 +727,18 @@ html, body {
 
         .socials {
             display: none;
+        }
+    }
+
+    .projects {
+        padding: 70px;
+
+        & .project__image_blue::before {
+            left: -30px;
+        }
+
+        & .project__image_purple::after {
+            right: -30px;
         }
     }
 
